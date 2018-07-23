@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Editor front-end</title>
+		<link type="text/css" rel="stylesheet" href="tabs.css" />
+
+	</head>
+	<body>
+		<div id="adddivtabdiv"> 
+			<!-- Tab Headers Start -->
+			<ul class="tabs" id="adddivtab">
+				<span id="appendTab"></span>
+				<li>
+					<a href="#" onclick="javascript:addNewDivTab('job');">
+						New Tab
+						<span class="newable"></span>
+					</a>
+				</li>
+			</ul>
+			<!-- Tab Headers End --> 
+			<!-- Tab Body Start -->
+			<div class="tabcontents" id="adddivtabbody">
+			</div>
+			<!-- Tab Body End -->
+			
+		</div>
+		<div id="hdnDataTabDiv" style="display:none;"> 
+			This is loaded from a hidden div in the html body. Div ID : hdnDataTabDiv 
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="tdi.tabs.js?v=123"></script>
+
+
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				//add hidden tabs example
+				$("#appendTab").dynatabs({
+					tabBodyID : 'adddivtabbody',
+					showCloseBtn : true,
+					confirmDelete : false
+				});
+			});
+			
+			function addNewDivTab(value)
+			{
+				$.addDynaTab({
+					tabID : 'appendTab',
+					type : 'div',
+					divID : 'hdnDataTabDiv',
+					params : {},
+					tabTitle : value
+				});
+			}
+		</script>
+	</body>
+</html>

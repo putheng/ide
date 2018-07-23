@@ -1,0 +1,96 @@
+/* For treemenu.js */
+.treemenu li {
+	list-style: none;
+}
+.treemenu .toggler {
+	cursor: pointer;
+}
+.treemenu .toggler:before {
+	display: inline-block;
+	margin-right: 2pt;
+}
+li.tree-empty > .toggler {
+	opacity: 0.3; cursor: default;
+}
+li.tree-empty > .toggler:before {
+	content: "";
+}
+li.tree-closed > .toggler:before {
+	content: "+";
+	background: url(icon/fclose.png);
+    background-repeat: no-repeat;
+    background-size: 8px 9px;
+    padding: 0px 2px;
+    background-position: center;
+    color: #fff0;
+    cursor: pointer;
+}
+li.tree-opened > .toggler:before {
+	content: "+";
+	background: url(icon/fopen.png);
+    background-repeat: no-repeat;
+    background-size: 8px 9px;
+    padding: 0px 2px;
+    background-position: center;
+    color: #fff0;
+    cursor: pointer;
+}
+.folder{
+
+}
+
+li > ul{
+	padding-left: 19px;
+}
+ul.tree,
+ul.tree li{
+	list-style: none;
+    position: relative;
+}
+li.tree-empty {
+    padding-left: 17px;
+}
+span.menuOption {
+    display: none;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #eee;
+    border-radius: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    right: 10px;
+}
+.isFile:hover{
+	opacity: 0.8
+}
+.isFile{
+    font-family: sans-serif;
+    color: #000000;
+    font-size: 13px;
+    text-decoration: none;
+    background: url(icon/files.png);
+    background-repeat: no-repeat;
+    background-size: 15px 20px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+    line-height: 25px;
+    border-radius: 3px;
+    padding-top: 4px;
+}
+.isFolder {
+	font-family: sans-serif;
+    color: #000000;
+    font-size: 13px;
+	line-height: 25px;
+    background: url(icon/folder.png);
+    padding: 1px 25px;
+    background-repeat: no-repeat;
+    background-size: 20px 17px;
+    text-decoration: none;
+    padding-right: 10px;
+}
+ul.tree {
+    padding-left: 5px;
+    margin-top: 7px;
+}

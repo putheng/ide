@@ -1,0 +1,50 @@
+<link type="text/css" href="jquery.treemenu.css" rel="stylesheet" />
+
+<ul class="tree">
+	<li><span class="isFolder" href="">Home</span></li>
+	<li>
+		<span class="isFolder">Category</span>
+		<ul>
+			<li>
+				<span class="isFolder">jQuery</span>
+				<ul>
+					<li><a class="isFile" href="#">jQuery</a></li>
+					<li><a class="isFile" href="#">jQuery Mobile</a></li>
+				</ul>
+			</li>
+			<li>
+				<span class="isFolder">JavaScript</span>
+				<ul>
+					<li><a class="isFile" href="#">AngularJS</a></li>
+					<li><a class="isFile" href="#">React</a></li>
+					<li><a class="isFile" href="#">Backbone</a></li>
+				</ul>
+			</li>
+			<li><a href="#" class="isFile">Golang</a></li>
+		</ul>
+	</li>
+	<li>
+		<span class="isFolder">About</span>
+		<ul>
+			<li><span class="isFolder">Contact</span></li>
+			<li><span class="isFolder">Blog</span></li>
+			<li>
+				<span class="isFolder">Jobs</span>
+				<ul>
+					<li><a class="isFile" href="#jobs1">Job 1</a></li>
+					<li><a class="isFile" href="#jobs2">Job 2</a></li>
+					<li><a class="isFile" href="#jobs3">Job 3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.treemenu.js"></script>
+<script>
+	$(function(){
+        $(".tree").treemenu({delay:100}).openActive();
+    });
+</script>
+
