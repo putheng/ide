@@ -54,9 +54,15 @@ shortcut.add("Ctrl+S",function() {
     alert(editor.getValue());
 });
 
+$(document).ready(function(){
+  $('#save').click(function(){
+    alert(editor.getValue());
+  });
+});
+
 $(function() {
   $.contextMenu({
-      selector: '.isFolder', 
+      selector: '.isFolder',
       callback: function(key, options) {
           var m = "clicked: " + key;
           //window.console && console.log(m) || alert(m);
